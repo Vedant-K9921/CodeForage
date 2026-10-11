@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="row-between">
+  <h2>Your repositories</h2>
+  <a class="btn" href="/repo/new">+ New repo</a>
+</div>
+
+{% for r in repos %}
+<div class="card">
+  <a class="repo-link" href="/{{ user.username }}/{{ r.name }}">{{ r.name }}</a>
+  <span class="badge">{{ "Private" if r.is_private else "Public" }}</span>
+  <p class="muted">{{ r.description or "No description" }}</p>
+</div>
+{% else %}
+<p class="muted">You have no repositories yet. Create your first one!</p>
+{% endfor %}
+{% endblock %}
