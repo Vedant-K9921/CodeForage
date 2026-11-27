@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Host your code. Track your work.</h1>
+  <p>A small GitHub-style platform built with Python, HTML and CSS.</p>
+  <a class="btn big" href="/register">Get started</a>
+  <a class="btn big secondary" href="/login">Login</a>
+</section>
+
+<section class="features">
+  <div class="card">
+    <h3>Repositories</h3>
+    <p>Public or private repos stored as real Git repositories.</p>
+  </div>
+  <div class="card">
+    <h3>Code browser</h3>
+    <p>Browse files, commits, branches and diffs.</p>
+  </div>
+  <div class="card">
+    <h3>Issues and PRs</h3>
+    <p>Discuss problems and merge branches with conflict checks.</p>
+  </div>
+</section>
+{% endblock %}
